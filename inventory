@@ -6,3 +6,6 @@ backend.devopswithaws.store
 
 [frontend]
 devopswithaws.store
+
+[all:vars]
+ansible_password=DevOps321
