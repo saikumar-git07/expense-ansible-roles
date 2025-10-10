@@ -1,0 +1,8 @@
+[db]
+db.devopswithaws.store
+
+[backend]
+backend.devopswithaws.store
+
+[frontend]
+devopswithaws.store
