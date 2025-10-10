@@ -1,5 +1,5 @@
 - name: install nginx server
-  ansible.builtin.dnf: 
+  ansible.builtin.dnf:
     name: nginx
     state: latest
 
@@ -24,7 +24,11 @@
     src: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
     dest: /usr/share/nginx/html
     remote_src: yes
-    
+- name: copy backend conf
+  ansible.builtin.copy:
+    src: expense.conf
+    dest: /etc/nginx/default.d/expense.conf
+
 - name: copy backend conf
   ansible.builtin.template:
     src: expense.conf.j2
@@ -32,9 +36,7 @@
   notify:
   - restart nginx
 
-
 # - name: restart nginx
 #   ansible.builtin.service:
 #     name: nginx
 #     state: restarted
-    
