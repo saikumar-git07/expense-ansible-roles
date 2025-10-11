@@ -1,5 +1,7 @@
 - name: configure DB server
   hosts: db
+  vars:
+  - secure-folder.yaml
   become: yes
   roles:
   - db
