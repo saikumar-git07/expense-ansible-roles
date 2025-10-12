@@ -1,6 +1,6 @@
-- name: daemon reload
+- name: daemon reload backend
   ansible.builtin.systemd_service:
-    name: backend
+    name: daemon reload backend
     daemon_reload: true
     state: reloaded
   when:
