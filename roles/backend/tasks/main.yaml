@@ -35,7 +35,7 @@
     src: backend.service.j2
     dest: /etc/systemd/system/backend.service
   notify:
-  - daemon reload 
+  - daemon reload backend
 
 - name: install python mysql dependencies
   ansible.builtin.pip:
