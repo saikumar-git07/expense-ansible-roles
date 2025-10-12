@@ -2,5 +2,4 @@
   ansible.builtin.systemd_service:
     name: daemon reload backend
     daemon_reload: true
-    state: reloaded
-  when:
+  
