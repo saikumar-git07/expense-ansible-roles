@@ -1,7 +1,7 @@
 - name: create ec2 and r53 records
   hosts: localhost
   vars:
-    zone: devopswithaws.storede
+    zone: devopswithaws.store
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
